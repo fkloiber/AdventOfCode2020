@@ -22,20 +22,5 @@ fn main() -> Result<(), Box<dyn Error>> {
     let answer = answer.ok_or("answer not found")?;
     aoc2020::check_answer(1, 1, answer)?;
 
-    let mut answer = None;
-    'outer_2: for (i, a) in input.iter().enumerate() {
-        for (j, b) in input[i..].iter().enumerate() {
-            for c in input[(i + j)..].iter() {
-                if a + b + c == 2020 {
-                    answer = Some(a * b * c);
-                    break 'outer_2;
-                }
-            }
-        }
-    }
-
-    let answer = answer.ok_or("answer not found")?;
-    aoc2020::check_answer(1, 2, answer)?;
-
     Ok(())
 }
