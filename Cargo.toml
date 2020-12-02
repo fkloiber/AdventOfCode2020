@@ -10,3 +10,4 @@ edition = "2018"
 reqwest = { version = "0.10", features = ['blocking', 'gzip'] }
 dotenv = "0.15"
 serde = { version = "1", features = ['derive'] }
+nom = "6"
