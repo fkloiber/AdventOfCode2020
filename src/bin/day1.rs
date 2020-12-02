@@ -3,7 +3,7 @@ use std::error::Error;
 fn main() -> Result<(), Box<dyn Error>> {
     dotenv::dotenv().ok();
 
-    let input = advent_of_code_2020::get_puzzle_input(1)?;
+    let input = aoc2020::get_puzzle_input(1)?;
     let input: Vec<usize> = input
         .lines()
         .map(|l| l.trim().parse())
@@ -20,7 +20,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     let answer = answer.ok_or("answer not found")?;
-    advent_of_code_2020::check_answer(1, 1, answer)?;
+    aoc2020::check_answer(1, 1, answer)?;
 
     let mut answer = None;
     'outer_2: for (i, a) in input.iter().enumerate() {
@@ -35,7 +35,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     let answer = answer.ok_or("answer not found")?;
-    advent_of_code_2020::check_answer(1, 2, answer)?;
+    aoc2020::check_answer(1, 2, answer)?;
 
     Ok(())
 }
